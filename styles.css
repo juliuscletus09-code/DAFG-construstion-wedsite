@@ -1,13 +1,14 @@
 :root {
-  --primary-blue: #0a2e5d;
-  --secondary-blue: #0d5fb5;
-  --accent-red: #d93025;
-  --light-blue: #eaf3ff;
+  --primary-blue: #1e2d3d;
+  --secondary-blue: #2f5d73;
+  --accent-gold: #d7a74d;
+  --accent-red: #c36b2a;
+  --light-blue: #edf4f7;
   --white: #ffffff;
-  --dark: #101828;
-  --muted: #46505e;
-  --soft-gray: #f5f7fb;
-  --shadow: 0 24px 60px rgba(10, 46, 93, 0.18);
+  --dark: #141c26;
+  --muted: #53606d;
+  --soft-gray: #f5f2ec;
+  --shadow: 0 24px 60px rgba(30, 45, 61, 0.18);
 }
 
 * {
@@ -117,7 +118,7 @@ button {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: var(--accent-red);
+  background: var(--accent-gold);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.25s ease;
@@ -145,7 +146,7 @@ button {
 .primary-button {
   background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
   color: var(--white);
-  box-shadow: 0 16px 30px rgba(13, 95, 181, 0.25);
+  box-shadow: 0 16px 30px rgba(47, 93, 115, 0.25);
 }
 
 .primary-button.inverse {
@@ -181,7 +182,7 @@ button {
 }
 
 .hero-section {
-  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #f7f2ea 0%, #ffffff 100%);
   padding: 72px 0 70px;
 }
 
@@ -244,7 +245,7 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  color: var(--accent-red);
+  color: var(--accent-gold);
   font-weight: 900;
 }
 
@@ -564,14 +565,14 @@ button {
   position: absolute;
   right: 28px;
   bottom: 24px;
-  background: linear-gradient(135deg, var(--accent-red), #b32520);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-red));
   color: var(--white);
   font-weight: 900;
   font-size: 1.2rem;
   letter-spacing: 0.08em;
   padding: 14px 18px;
   border-radius: 14px;
-  box-shadow: 0 14px 28px rgba(217, 48, 37, 0.3);
+  box-shadow: 0 14px 28px rgba(199, 122, 38, 0.28);
   z-index: 2;
 }
 
@@ -708,6 +709,204 @@ button {
   color: var(--muted);
 }
 
+.testimonials-section {
+  padding: 0 0 100px;
+}
+
+.testimonials-heading {
+  max-width: 760px;
+  margin: 0 auto 28px;
+}
+
+.section-intro {
+  margin: 18px auto 0;
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.review-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0 auto 32px;
+  max-width: 760px;
+}
+
+.review-summary div {
+  background: var(--soft-gray);
+  border: 1px solid rgba(10, 46, 93, 0.06);
+  border-radius: 18px;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+.review-summary strong {
+  display: block;
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.review-summary span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+  border: 1px solid rgba(10, 46, 93, 0.08);
+  border-radius: 24px;
+  padding: 28px 24px;
+  box-shadow: 0 16px 30px rgba(10, 46, 93, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 42px rgba(10, 46, 93, 0.09);
+}
+
+.stars {
+  color: #f5b301;
+  letter-spacing: 0.12em;
+  font-size: 1.08rem;
+  margin-bottom: 16px;
+}
+
+.quote {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.client-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(10, 46, 93, 0.08);
+}
+
+.client-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.client-meta strong {
+  display: block;
+  color: var(--dark);
+  font-size: 1rem;
+}
+
+.client-meta span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.review-referral-section {
+  padding: 0 0 100px;
+}
+
+.review-referral-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+}
+
+.feedback-panel,
+.referral-panel {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f6f2 100%);
+  border: 1px solid rgba(30, 45, 61, 0.08);
+  border-radius: 26px;
+  padding: 30px 26px;
+  box-shadow: 0 18px 35px rgba(30, 45, 61, 0.06);
+}
+
+.feedback-panel h2,
+.referral-panel h2 {
+  margin: 0 0 24px;
+  font-size: clamp(1.7rem, 2vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.review-form,
+.referral-form {
+  display: grid;
+  gap: 18px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.review-form label,
+.referral-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select,
+.referral-form input,
+.referral-form textarea {
+  width: 100%;
+  border: 1px solid rgba(30, 45, 61, 0.12);
+  background: var(--white);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  color: var(--dark);
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-form input:focus,
+.review-form textarea:focus,
+.review-form select:focus,
+.referral-form input:focus,
+.referral-form textarea:focus {
+  outline: none;
+  border-color: rgba(47, 93, 115, 0.7);
+  box-shadow: 0 0 0 4px rgba(47, 93, 115, 0.08);
+}
+
+.star-select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 180px;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  background: rgba(215, 167, 77, 0.12);
+  color: #f5b301;
+  letter-spacing: 0.12em;
+  font-size: 1.1rem;
+}
+
 .cta-section {
   padding-bottom: 100px;
 }
@@ -824,8 +1023,11 @@ button {
 
   .services-grid,
   .projects-grid,
+  .testimonial-grid,
   .footer-grid,
-  .partners-row {
+  .partners-row,
+  .review-referral-grid,
+  .field-row {
     grid-template-columns: 1fr;
   }
 
